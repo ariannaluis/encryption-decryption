@@ -1,6 +1,5 @@
 """
-Contains read() and write() functions to read from and write to files
-respectively.
+Read from and write to files.
 
 Author: Arianna Luis
 """
@@ -8,7 +7,10 @@ Author: Arianna Luis
 
 def read(filename):
     """
-    Read from file in binary mode.
+    Read contents of a file.
+    Parameters:
+        filename (str): Name of the file to read from
+    Returns contents of the file (bytes).
     """
     with open(filename, 'rb') as file:
         return file.read()
@@ -16,7 +18,10 @@ def read(filename):
 
 def write(filename, data):
     """
-    Write to file in binary mode.
+    Write data to a file.
+    Parameters:
+        filename (str): Name of the file to write to
+        data (bytes): Data to write to the file
     """
     with open(filename, 'wb') as file:
         file.write(data)
